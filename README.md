@@ -4,7 +4,7 @@
 
 **Another Zawgyi <=> Unicode Converter**
 
-### Author: Banyer Han
+### Author: [Banyer Han](https://nightfury.info)
 
 ## Info
 
