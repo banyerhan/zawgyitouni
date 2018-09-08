@@ -16,10 +16,11 @@ When I was writting [ZG2uni](https://github.com/banyerhan/zawgyitouni) , I need 
 
 > If you are not using in app or program and just for converting the text , please use [Parabaik](https://github.com/banyerhan/zawgyitouni)
 
-### Demo
+### visit here
 
 - [Web](http://v7.nightfury.info)
 
+### Author: Banyer Han
 
 ## Build
 
