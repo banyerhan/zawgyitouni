@@ -1,0 +1,106 @@
+<html>
+<head>
+	<title>Zawgyi to Unicode Changer</title>
+  <link rel='icon' href='favicon.png' type='image/x-icon' />
+	<meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="rabbit.js"></script>
+	<link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href='http://mmwebfonts.comquas.com/fonts/?font=mon3' />
+    <link rel="stylesheet" href='http://mmwebfonts.comquas.com/fonts/?font=zawgyi' />
+    <script type="text/javascript">
+      function clearText() {
+        document.getElementById("unicode").value = "";
+        document.getElementById("zawgyi").value = ""
+      }
+
+  </script>
+</head>
+<body>
+<div id="container">
+	<header>
+		<!-- <img src="bnh.png"> -->
+		<!-- <h2>Night Fury Text Exchange</h2> -->
+    <div class="foo">
+      <span class="letter" data-letter="W">W</span>
+      <span class="letter" data-letter="E">E</span>
+      <span class="letter" data-letter="L">L</span>
+      <span class="letter" data-letter="C">C</span>
+      <span class="letter" data-letter="O">O</span>
+      <span class="letter" data-letter="M">M</span>
+      <span class="letter" data-letter="E">E</span>
+    </div>
+	</header>
+  <div id="textContainer">
+
+        <section id="Unicode">
+            <h3>ကျွန်တော့် ယူနီကုတ် ပုံစံ</h3>
+            <textarea id="unicode" onfocus="handleOnFocus(this)" onblur="handleOnBlur()">Night Fury သည် သေဆုံးလေ့မရှိပါ... ပျောက်ဆုံးခြင်းလည်းမရှိပါ... တိတ်ဆိတ်ခြင်းသာ ပျော်မွေ့သည်။</textarea>
+        </section>
+        
+        <section id="Zawgyi">
+            <h3>ကၽြန္ေတာ့္ ေဇာ္ဂ်ီေဖာင့္ ပံုစံ</h3>
+            <textarea id="zawgyi" onfocus="handleOnFocus(this)" onblur="handleOnBlur()">Night Fury သည္ ေသဆံုးေလ့မရွိပါ... ေပ်ာက္ဆံုးျခင္းလည္းမရွိပါ... တိတ္ဆိတ္္ျခင္းသာ ေပ်ာ္ေမြ ့သည္။</textarea>
+        </section>
+    </div>
+    <div id="textContainer">
+    <section id="buttons">
+        <input type="button" value="Reset Text" onclick="clearText()">
+    </section>
+  </div>
+	<footer>
+		Found a bug ? Please , Create <a href="https://github.com/banyerhan/zawgyitouni/issues" target="_blank">new issues</a><br>
+    <small>Coveraged by <a href="https://nightfury.info" target="_blank">Night Fury</a></small>
+	</footer>
+</div>
+
+<script>
+
+
+var textFieldInFocus;
+function handleOnFocus(form_element)
+{
+   textFieldInFocus = form_element;
+}
+function handleOnBlur()
+{
+   textFieldInFocus = null;
+}
+
+var unicode = document.getElementById("unicode");
+var zawgyi = document.getElementById("zawgyi");
+
+onchangeHandler(unicode,zawgyi,"uni2zg");
+onchangeHandler(zawgyi,unicode,"zg2uni");
+
+function converter(textField,tochangeField,toconv) {
+    if(tochangeField != textFieldInFocus) {
+        if(toconv == "uni2zg") {
+              tochangeField.value = Rabbit.uni2zg(textField.value);
+        }
+        else {
+             tochangeField.value = Rabbit.zg2uni(textField.value);
+        }
+    }
+}
+
+function onchangeHandler(textField,tochangeField,toconv) {
+    
+    if (textField.addEventListener) {
+      textField.addEventListener('input', function() {
+          converter(textField,tochangeField,toconv);
+      }, false);
+    } else if (textField.attachEvent) {
+      textField.attachEvent('onpropertychange', function() {
+        // IE
+          converter(textField,tochangeField,toconv);
+      });
+    }
+    
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+header{
+	text-align:center;
+}
+
+header h2{
+	display: inline-block;
+}
+#container {
+	background: url("./wall2.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3{
+	text-align:center;
+	color:#fff;
+}
+
+body, section, #container {
+	margin: 0px;
+	padding: 0px;
+
+}
+
+footer{
+	clear:both;
+	text-align:center;
+	padding-top:30px;
+	font-size: 11px;
+	color:#fff;
+	padding-bottom: 32px;
+}
+
+textarea{
+	max-width: 100%;
+    min-width: 100%;
+    min-height: 340px;
+    padding: 10px;
+    line-height: 2em;
+    font-size: .9em;
+    border: 1px solid #e30b1d;
+    text-align: left;
+    background-color: rgba(249, 249, 249, 0.5);
+    color:#fff;
+}
+
+#textContainer {
+	text-align: center;
+}
+
+#Unicode{
+	display:inline-block;
+	width:48%;
+	padding-left: 10px;
+	font-family: "Pyidaungsu","MON3 Anonta 1";
+}
+#Zawgyi{
+	display:inline-block;
+	width:48%;
+	padding-right: 10px;
+	font-family: "Zawgyi-One";
+}
+
+input[type="button" i] {
+	background-color: #c6e9f5;
+    color: #e30b1d;
+    padding: 10px 20px;
+    border: 1px solid #e30b1d;
+    box-shadow: 3px 3px 3px;
+}
+div.foo{
+  width: 100%;
+}
+.letter{
+  display: inline-block;
+  font-weight: 900;
+  font-size: 6em;
+  margin-left: 0.2em;
+  position: relative;
+  color: #da0d1b;
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before, .letter:after{
+  position:absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top:0;
+  left:0;
+}
+.letter, .letter:before, .letter:after{
+  transition: all 0.3s ease-in-out;
+}
+.letter:before{
+  color: #fff;
+  text-shadow: 
+    -1px 0px 1px rgba(255,255,255,.8),
+    1px 0px 1px rgba(0,0,0,.8);
+  z-index: 3;
+  transform:
+    rotateX(0deg)
+    rotateY(-15deg)
+    rotateZ(0deg);
+}
+.letter:after{
+  color: rgba(0,0,0,.11);
+  z-index:2;
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg)
+    skew(0deg,1deg);
+}
+.letter:hover:before{
+  color: #fafafa;
+  transform:
+    rotateX(0deg)
+    rotateY(-40deg)
+    rotateZ(0deg);
+}
+.letter:hover:after{
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(40deg)
+    rotateZ(0deg)
+    skew(0deg,22deg);
+}
+a {color:red;}
+a:hover {color:#fff;}
+
+
+For responsive
+@media(max-width:701px){
+	
+#textContainer {
+	padding: 5px; 
+}
+
+#Unicode{
+	width:100%;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+#Zawgyi{
+	width:100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+textarea {
+	min-height:200px;
+	font-size: .9em;
+	padding: 10px !important;
+}
+
+
+}
