@@ -4,6 +4,8 @@
 
 **Another Zawgyi <=> Unicode Converter**
 
+### Author: Banyer Han
+
 ## Info
 
 Zawgyi to Unicode has been written in [2018](https://github.com/banyerhan/zawgyitouni). Now, unicode to zawgyi has been finished.
@@ -20,7 +22,6 @@ When I was writting [ZG2uni](https://github.com/banyerhan/zawgyitouni) , I need 
 
 - [Web](http://v7.nightfury.info)
 
-### Author: Banyer Han
 
 ## Build
 
