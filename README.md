@@ -1,4 +1,4 @@
-# Rabbit
+# Nightfury
 
 ![Logo](./favicon.png)
 
