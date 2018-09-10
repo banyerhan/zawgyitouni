@@ -1,4 +1,4 @@
-var Rabbit = {
+var nightfury = {
   "zg2uni" : zg2uni,
   "uni2zg": uni2zg
 }
