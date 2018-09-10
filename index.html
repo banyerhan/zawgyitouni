@@ -4,7 +4,7 @@
   <link rel='icon' href='favicon.png' type='image/x-icon' />
 	<meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="rabbit.js"></script>
+	<script src="nightfury.js"></script>
 	<link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href='http://mmwebfonts.comquas.com/fonts/?font=mon3' />
     <link rel="stylesheet" href='http://mmwebfonts.comquas.com/fonts/?font=zawgyi' />
@@ -76,10 +76,10 @@ onchangeHandler(zawgyi,unicode,"zg2uni");
 function converter(textField,tochangeField,toconv) {
     if(tochangeField != textFieldInFocus) {
         if(toconv == "uni2zg") {
-              tochangeField.value = Rabbit.uni2zg(textField.value);
+              tochangeField.value = nightfury.uni2zg(textField.value);
         }
         else {
-             tochangeField.value = Rabbit.zg2uni(textField.value);
+             tochangeField.value = nightfury.zg2uni(textField.value);
         }
     }
 }
